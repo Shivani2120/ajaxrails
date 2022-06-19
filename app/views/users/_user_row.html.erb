@@ -1,0 +1,17 @@
+<tr id="userRow_<%= user.id %>" >
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= user.address %></td>
+    <td><%= user.contact %></td>
+    <td><div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Actions
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><%= link_to 'Show', user, class: "dropdown-item", data: { bs_toggle: "modal", bs_target: "#showUserModal", remote: true } %></li>
+        <li><%= link_to 'Edit', edit_user_path(user), class: "dropdown-item", data: { bs_toggle: "modal", bs_target: "#editUserModal", remote: true } %></li>
+        <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item", remote: true %></li>
+    </ul>
+    </div></td>
+</tr>
