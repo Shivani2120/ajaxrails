@@ -17,3 +17,5 @@ global.$ = jQuery;
 
 import 'stylesheets/application';
 import 'bootstrap';
+require("trix")
+require("@rails/actiontext")
